@@ -9,20 +9,20 @@ import {
   Box,
   Button,
 } from "@mui/material";
-import * as React from 'react';
+import * as React from "react";
 import CreateIdComponent from "./CreateIdComponent";
 import EventSettingsComponent from "./EventSettingsComponent";
 
-const steps = ['Create Event', 'Create id code'];
+const steps = ["Create Event", "Create id code"];
 
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return <EventSettingsComponent/>
+      return <EventSettingsComponent />;
     case 1:
-      return <CreateIdComponent/>
+      return <CreateIdComponent />;
     default:
-      throw new Error('Unknown step');
+      throw new Error("Unknown step");
   }
 }
 
@@ -41,7 +41,10 @@ function AddEventComponent() {
     <>
       <CssBaseline />
       <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
-        <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
+        <Paper
+          variant="outlined"
+          sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
+        >
           <Typography component="h1" variant="h4" align="center">
             Create Event
           </Typography>
@@ -54,12 +57,11 @@ function AddEventComponent() {
           </Stepper>
           <React.Fragment>
             {activeStep === steps.length ? (
-              <React.Fragment>
-              </React.Fragment>
+              <React.Fragment></React.Fragment>
             ) : (
               <React.Fragment>
                 {getStepContent(activeStep)}
-                <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
+                <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                   {activeStep !== 0 && (
                     <Button onClick={handleBack} sx={{ mt: 3, ml: 1 }}>
                       Back
@@ -71,7 +73,7 @@ function AddEventComponent() {
                     onClick={handleNext}
                     sx={{ mt: 3, ml: 1 }}
                   >
-                    {activeStep === steps.length - 1 ? 'Create event' : 'Next'}
+                    {activeStep === steps.length - 1 ? "Create event" : "Next"}
                   </Button>
                 </Box>
               </React.Fragment>
@@ -83,4 +85,4 @@ function AddEventComponent() {
   );
 }
 
-export default AddEventComponent
+export default AddEventComponent;

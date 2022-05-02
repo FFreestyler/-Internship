@@ -24,6 +24,9 @@ function EventSettingsComponent() {
             name="stageCount"
             label="Stage count"
             type="number"
+            InputProps={{
+              inputProps: { min: 0 },
+            }}
             fullWidth
             variant="standard"
           />
@@ -35,6 +38,9 @@ function EventSettingsComponent() {
             name="juryCount"
             label="Jury count"
             type="number"
+            InputProps={{
+              inputProps: { min: 0 },
+            }}
             fullWidth
             variant="standard"
           />
@@ -46,6 +52,9 @@ function EventSettingsComponent() {
             name="comandsCount"
             label="Comands count"
             type="number"
+            InputProps={{
+              inputProps: { min: 0 },
+            }}
             fullWidth
             variant="standard"
           />
