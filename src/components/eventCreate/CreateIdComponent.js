@@ -10,7 +10,7 @@ function CreateIdComponent() {
         <Grid item xs={12}>
           <TextField
             required
-            id="Event ID"
+            id="eventID"
             name="eventID"
             label="Event ID"
             fullWidth

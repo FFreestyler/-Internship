@@ -10,7 +10,7 @@ function EventSettingsComponent() {
         <Grid item xs={12}>
           <TextField
             required
-            id="Event name"
+            id="eventName"
             name="eventName"
             label="Event name"
             fullWidth
@@ -20,7 +20,7 @@ function EventSettingsComponent() {
         <Grid item xs={12}>
           <TextField
             required
-            id="Stage count"
+            id="stageCount"
             name="stageCount"
             label="Stage count"
             type="number"
@@ -34,7 +34,7 @@ function EventSettingsComponent() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="Jury count"
+            id="juryCount"
             name="juryCount"
             label="Jury count"
             type="number"
@@ -48,7 +48,7 @@ function EventSettingsComponent() {
         <Grid item xs={12} sm={6}>
           <TextField
             required
-            id="Comands count"
+            id="comandsCount"
             name="comandsCount"
             label="Comands count"
             type="number"
