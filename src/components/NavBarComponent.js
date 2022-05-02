@@ -11,8 +11,7 @@ import {
   Avatar,
 } from "@mui/material";
 import * as React from "react";
-
-const settings = ["Create ..."];
+import { useNavigate } from "react-router-dom";
 
 function NavBarComponent() {
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -24,6 +23,18 @@ function NavBarComponent() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const navigate = useNavigate();
+
+  const settings = [
+    {
+      name: "Create event",
+      onClick: () => {
+        handleCloseUserMenu();
+        navigate("/user");
+      },
+    },
+  ];
 
   return (
     <AppBar position="static">
@@ -67,8 +78,8 @@ function NavBarComponent() {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.name} onClick={setting.onClick}>
+                  <Typography textAlign="center">{setting.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>

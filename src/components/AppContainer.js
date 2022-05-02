@@ -7,6 +7,14 @@ function AppContainer() {
   return (
     <>
       <Routes>
+      <Route
+          path="/"
+          element={
+            <>
+              <NavBarComponent />
+            </>
+          }
+        ></Route>
         <Route
           path="/user"
           element={
