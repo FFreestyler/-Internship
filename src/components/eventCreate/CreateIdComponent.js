@@ -1,4 +1,5 @@
 import { Typography, Grid, TextField } from "@mui/material";
+import { v4 as uuid } from "uuid";
 
 function CreateIdComponent() {
   return (
@@ -14,6 +15,7 @@ function CreateIdComponent() {
             name="eventID"
             label="Event ID"
             fullWidth
+            defaultValue={uuid()}
             InputProps={{
               readOnly: true,
             }}
